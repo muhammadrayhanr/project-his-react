@@ -1,25 +1,17 @@
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Jumbotron from './components/Jumbotron';
-import About from './components/About';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LandingPages from './pages/LandingPage';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
-    <>
-    <Navigation />
-    <Jumbotron />
-    <About />
-    </>
-    // <div className="App">
-    //   <BrowserRouter>
-    //     <Navigation />
-    //     <Jumbotron />
-    //     <About />
-    //     <Routes>
-    //       <Route path="/" element={<Login />} />
-    //     </Routes>
-    //   </BrowserRouter>
-    // </div>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPages />}></Route>
+          <Route path="/login" element={<LoginPage />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

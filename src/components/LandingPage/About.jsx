@@ -1,4 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import './LandingPage.css';
 
 const About = () => {
   return (
